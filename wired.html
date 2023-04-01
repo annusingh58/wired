@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wired</title>
+    <script src="https://kit.fontawesome.com/5553f878fa.js" crossorigin="anonymous"></script>
+        <style>
+    *{
+        padding:0;
+        margin:0;
+        box-sizing: border-box;
+    }
+    #screen{
+        width:100%;
+        /* height: 1500px; */
+        border:5px solid red;
+    }
+    #nvbar{
+        height: 60px;
+        width: 100%;
+        border-bottom: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #nvbar>div:nth-child(1){
+        width:70%;
+        height: 50px;
+        display: flex;
+        /* border: 1px solid black; */
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    #nvbar>div:nth-child(1)>div:nth-child(1){
+        width:4%;
+        height:40px;
+        /* border:1px solid blueviolet; */
+        display: flex;
+        
+    }
+    #nvbar>div:nth-child(1)>div:nth-child(3)>p{
+        color:black;
+        
+    }
+
+        
+    #nvbar>div:nth-child(1)>div:nth-child(1)>i{
+        align-self: center;
+        font-size: 30px;
+
+    }
+    #nvbar>div:nth-child(1)>div:nth-child(2){
+        width:20%;
+        height:40px;
+        /* border:1px solid blueviolet; */
+        
+    }
+    #nvbar>div:nth-child(1)>div:nth-child(3){
+        width:70%;
+        height:40px;
+        /* border:1px solid blueviolet; */
+        display: flex;
+        justify-content: space-between;
+        align-items:  center;
+        font-size: 11px;
+        
+        
+    }
+
+
+    #nvbar>div:nth-child(2){
+        width:20%;
+        height: 50px;
+        /* border: 1px solid black; */
+        display: flex;
+    }
+    #nvbar>div:nth-child(2)>div{
+        display: flex;
+        /* border: 1px solid red; */
+        height: 100%;
+        width: 90%;
+        justify-content: space-evenly;
+        align-items: center;
+
+    }
+    #nvbar>div:nth-child(2)>div:nth-child(2)>button{
+        background-color: rgb(47,102,151);
+        color: white;
+        height: 30px;
+        font-size: 10px;
+        padding: 5px;
+
+    }
+
+    #body{
+        width: 90%;
+        /* height:700px ; */
+        border :2px solid blue;
+        display: flex;
+        margin: auto;
+        justify-content: space-between;
+        
+    }
+    #left{
+        width:75%;
+        height:95%;
+        /* border:2px solid yellow; */
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+    }
+
+    #left> div:nth-child(1){
+        width:100%;
+        height:40px;
+        /* border-top:2px solid black; */
+        display: flex;
+        flex-direction: column;
+    }
+    #left>div:nth-child(1)>button{
+        width:150px;
+        height: 35px;
+        background-color: black;
+        color: white;
+
+    }
+
+    #left> div:nth-child(2){
+        display: flex;
+        justify-content: space-between;
+    }
+    #left1{
+            width: 30%;
+            /* height:600px ; */
+            /* border:1px solid rgb(179, 60, 60); */
+    }
+
+    #left1>div{
+        height: 50%;
+        width:100%;
+        /* border:1px solid rebeccapurple; */
+        /* margin-top: 10px; */
+    }
+    #left1>div>div:nth-child(1){
+        width:100%;
+        height:150px;
+    }
+    #left1>div>div:nth-child(1)>img{
+        width:100%;
+        height:100%;
+    }
+    #left1>div>div:nth-child(2){
+        height: 150px;
+        width: 100%;
+    }
+
+    
+    
+    
+
+
+
+    #left2{
+            width:65%;
+            height: 600px;
+            /* border:1px solid grey; */
+    }
+    #left2>div:nth-child(1){
+        width: 100%;
+        height: 400px;
+    }
+    #left2>div:nth-child(1)>img{
+        width: 100%;
+        height:100%;
+    }
+    #left2>div:nth-child(2)>h6{
+        margin-bottom: 10px;
+    }
+    #left2>div:nth-child(2)>p{
+        margin-bottom: 15px;
+    }
+    #left2>div:nth-child(2)>h1{
+        margin-bottom: 15px;
+    }
+
+
+
+    #right{
+            width:24%;
+            height: 100%;
+            /* border:2px solid green; */
+    }
+    #right> div:nth-child(1){
+        width:100%;
+        height:40px;
+        border-top:2px solid black;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+    #right>div:nth-child(1)>button{
+        width:130px;
+        height: 30px;
+        background-color: black;
+        color: white;
+
+    }
+   
+     
+    #right1{
+        width: 100%;
+        height: 100%;
+    }
+    #right1>div{
+        width:100%;
+        height:100px;
+        border-bottom:1px solid grey;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #right1>div>div:nth-child(1){
+        width: 60%;
+        height: 90%;
+        /* border: 1px solid rebeccapurple; */
+    }
+    #right1>div>div:nth-child(1)>h3{
+        font-size: 15px;
+        margin-bottom: 15px;
+
+    }
+    #right1>div>div:nth-child(1)>h6{
+        color: rgb(73, 72, 72);
+    }
+
+    #right1>div>div:nth-child(2){
+        width:35%;
+        height: 90%;
+        /* border: 1px solid red; */
+        align-items: center;
+    }
+    #right1>div>div:nth-child(2)>img{
+        height: 100%;
+        width: 100%;
+
+    }
+    #right1>div:h6{
+        margin-top: 20px;
+    }
+    
+    
+
+
+
+
+
+
+    @media screen and (max-width:1020px){
+        #body{
+            flex-direction: column;
+
+        }
+        #left{
+            width: 100%;
+        }
+        #right{
+            width: 100%;
+        }
+        #right1{
+            width: 100%;
+            flex-wrap: wrap;
+            display: flex;
+        }
+        #right1>div{
+            width:50%;
+        }
+
+    }
+    @media screen and (max-width:770px){
+        #nvbar>div:nth-child(1)>div:nth-child(3){
+            display: none;
+        }
+        #nvbar>div:nth-child(1){
+            width:9%;
+            justify-content: space-between;
+
+        }
+        #nvbar>div:nth-child(2){
+            width:18%;
+        }
+        #nvbar>div:nth-child(2)>div:nth-child(3){
+            display: none;
+        }
+        #nvbar>div:nth-child(2)>div:nth-child(1){
+            display: none;
+        }
+        #right1>div{
+            width:100%;
+        }
+        #right1>div>div:nth-child(2){
+            display: none;
+        }
+        #right1>div>div:nth-child(1){
+            width:100%;
+            height:60%
+        }
+        #right1>div{
+            height: 90px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid grey;
+        }
+        #left>div:nth-child(2){
+            flex-direction: column-reverse;
+        }
+        #left1{
+            width: 100%;
+        }
+        #left2{
+            width:100%;
+            height:100%;
+        }
+        #left1>div{
+            height: 500px;
+            border:3px solid green;
+        }
+        #left1>div>div:nth-child(1){
+            height: 70%;
+            border:2px solid red;
+        }
+        #left1>div>div:nth-child(2){
+            height: 30%;
+        }
+
+    }
+
+
+</style>
+</head>
+<body>
+    <div id="screen">
+        <div id="nvbar">
+            <div>
+                <div>
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div>
+                    <img src="/logo-header.svg"/>
+                </div>
+                <div>
+                    <p>BACKCHANNEL</p>
+                    <P>BUSINESS</P>
+                    <P>CULTURE</P>
+                    <P>GEAR</P>
+                    <P>IDEAS</P>
+                    <P>SCIENCE</P>
+                    <P>SECURITY</P>
+                </div>
+            </div>
+            <div>
+                
+                <div>
+                    <p>SIGN IN</p>
+                </div>
+                <div>
+                    <button>SUBSCRIBE</button>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                
+                </div>
+            </div>
+
+        </div>
+        <div id="body">
+            
+            <div id="left">
+                <div>
+                    <button>TODAY'S PICKS</button>
+                </div>
+
+                <div>
+                    <div id="left1">
+                    <div>
+                        <div>                        
+                            <img src="/picks-1.jpeg"/>
+                        </div>
+                        <div>
+                            <p>HIGH LIFE</p>
+                        <h3>Space Archeologists Are Charting Humanity’s Furthest Frontier
+                            </h3>
+                            <p>RAMIN SKIBBA</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="/picks2.jpeg"/>
+
+                        </div>
+                        <div>
+                            <h6>UNPRECEDENTED</h6>
+                        <h3>Trump’s Indictment Marks a Historic Reckoning </h3>
+                        <h6>GARRETT M. GRAFF</h6>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="left2">
+                    <div>
+                        <img src="/picks3.jpeg"/>
+                    </div>
+                    <div>
+                        <h6>THE MONITOR</h6>
+                        <h1>THE POPE’S COAT IS HERE TO RUIN YOUR FAITH</h1>
+                        <p>In the internet. Ruin your faith in the internet.</p>
+                        <h6>ANGELA WATERCUTTER</h6>
+                    </div>
+
+                </div>
+
+                </div>
+
+            </div>
+            <div id="right">
+                <div >
+                    <button>MOST RECENT</button>
+                </div>
+                <div id="right1">
+                    <div >
+                        <div>
+                            
+                            <h3>The Best Portable Storage Drives</h3>
+                            <h6>SCOTT GILBERTSON</h6>
+                        
+                        </div>
+
+
+                        <div>
+                            <img src="https://media.wired.com/photos/6425e830a07df6f726e9e533/1:1/w_1280%2Cc_limit/Western-Digital-Elements-Desktop-Hard-Drive-Gear.png"/>
+                        </div></div>
+                    
+                    <div>
+                        <div>
+                            <h3>How to Back Up Your Digital Life</h3>
+                            <h6>SCOTT GILBERTSON</h6>
+                        </div>
+                        <div>
+                            <img src="https://media.wired.com/photos/64262be90a0ea4241d03048f/1:1/w_1280%2Cc_limit/How-to-Back-Up-Your-Digital-Life-Gear-GettyImages-1458674794.png"/>
+                        </div>
+                    </div>
+                    <div>
+                        <DIV>
+                           
+                     <h3>The Internet Archive’s Literary Civil Wa</h3>
+                            <h6>KATE KNIBBS</h6>
+                    </DIV>
+
+                        <DIV>
+                            <Img src="https://media.wired.com/photos/642617319a4669561fee606b/1:1/w_1280%2Cc_limit/Internet-Archive's-Literary-Civil-War-Business-1283444005.jpg"/>
+                        </DIV>
+                    </div>
+                    <div>
+                        <div>
+                            <h3>13 Laptops We’ve Tested and Love
+                                </h3>
+                                <h6>ADAM SPEIGHT AND</h6>
+                        </div>
+                        <div>
+                            <img src="https://media.wired.com/photos/6425ef2984ccb2dd1d2ac6cb/1:1/w_1280%2Cc_limit/asuszenbooks13oled_GEAR-Featured.jpg"/>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h3>The Best Noise-Canceling Headphones to Escape Reality</h3>
+                        <h6>PARKER HALL</h6>
+                        </div>
+                        <div>
+                            <img src="https://media.wired.com/photos/641e28d7c5d2100c6c651020/1:1/w_1280%2Cc_limit/Bose-QC35-II-Gear.png"/>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>
