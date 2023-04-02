@@ -15,7 +15,7 @@
     #screen{
         width:100%;
         /* height: 1500px; */
-        border:5px solid red;
+        border:1px solid red;
     }
     #nvbar{
         height: 60px;
@@ -24,6 +24,8 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        position: fixed;
+        background-color: white;
     }
     #nvbar>div:nth-child(1){
         width:70%;
@@ -101,6 +103,7 @@
         display: flex;
         margin: auto;
         justify-content: space-between;
+        margin-top: 70px;
         
     }
     #left{
@@ -251,7 +254,82 @@
         margin-top: 20px;
     }
     
+    #story{
+        width: 90%;
+        height:470px ;
+        border :2px solid green;
+        margin: auto;
+        justify-content: space-between;
+        
+    }
     
+    #story> div:nth-child(1){
+        width:100%;
+        height:40px;
+        border-top:2px solid black;
+        display: flex;
+        /* border:3px solid red; */
+        margin-bottom: 15px;
+        
+    }
+    #story>div:nth-child(1)>button{
+        width:150px;
+        height: 35px;
+        background-color: black;
+        color: white;
+
+    }
+    #story>div:nth-child(1)>p{
+        margin-left:30px;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+     
+    #story> div:nth-child(2){
+        width:100%;
+        height: 390px;
+        /* border: 1px solid gray; */
+        display: flex;
+        justify-content: space-between;
+
+    }
+    #story> div:nth-child(2)>div{
+        width:22%;
+        height: 390px;
+        /* border: 1px solid gray; */
+        
+    }
+
+    #story> div:nth-child(2)>div>div:nth-child(1){
+        height: 50%;
+        width: 100%;
+        /* border: 1px solid red; */
+
+    }
+    #story> div:nth-child(2)>div>div:nth-child(1)>img{
+        height: 100%;
+        width: 100%;
+
+    }
+    #story> div:nth-child(2)>div>div:nth-child(2){
+        height: 50%;
+        width: 100%;
+        /* border: 1px solid blue; */
+    }
+    #story> div:nth-child(2)>div>div:nth-child(2)>p{
+        margin-top: 10px;
+        font-size: small;
+    }
+    #story> div:nth-child(2)>div>div:nth-child(2)>h3{
+        margin-top: 10px;
+        font-size: medium;
+    }
+
+
+
+
+
+
 
 
 
@@ -334,6 +412,34 @@
         #left1>div>div:nth-child(2){
             height: 30%;
         }
+        #story>div:nth-child(2){
+            flex-direction: column;
+            
+        }
+        #story>div:nth-child(2)>div{
+            display: flex;
+            flex-direction: row-reverse;
+            width:100%;
+            height:130px;
+
+        }
+        #story>div:nth-child(2)>div>div:nth-child(1){
+            width:20%;
+            height:100%;
+            display: flex;
+            align-items: center;
+        }
+        #story>div:nth-child(2)>div>div:nth-child(1)>img{
+            height:60% ;
+        }
+
+        #story>div:nth-child(2)>div>div:nth-child(2){
+            width:80%;
+            height:130px;
+
+        }
+
+
 
     }
 
@@ -491,6 +597,62 @@
 
             </div>
 
+        </div>
+
+        <div id="story">
+                <div>
+                    <button>TRENDING STORIES</button>
+                    <p>TOP STORIES IN THE LAST 48 HOURS</p>
+                </div>
+                <div>
+                    <div>
+                        <div>                        
+                            <img src="/story1.jpeg"/>
+                        </div>
+                        <div>
+                            <P>CULTURE</P>
+                            <h3>The 12 Best Amazon Prime Movies Right Now</h3>
+                            <p>From Shotgun Wedding to No Time to Die, these are the best films available on the streamer.</p>
+                            <p>WIRED STAFF</p>
+                        </div>
+
+                    </div>
+                    <div>
+                        <div>
+                            <img src="/story2.jpg"/>
+                        </div>
+                        <div>
+                            <p>CULTURE</p>
+                            <h3>The 13 Best Movies on HBO Max Right Now</h3>
+                            <P>From Goodfellas to The Banshees of Inisherin, here are our favorite movies on the streaming service.</P>
+                            <P>WIRED STAFF</P>
+                        </div>
+
+                    </div>
+                    <div>
+                        <div>
+                            <img src="/story4.jpeg"/>
+                        </div>
+                        <div>
+                            <P>GEAR</P>
+                            <h3>The 12 Top New Android 14 Features</h3>
+                            <P>Here's what Google has planned for the next version of its mobile operating system.</P>
+                            <P> SIMON HILL</P>
+                            </div>
+
+                    </div>
+                    <div>
+                        <div>
+                            <img src="/story3.jpg"/>
+                        </div>
+                        <div>
+                            <p>BLACKCHANNEL</p>
+                            <h3>The Unbelievable Zombie Comeback of Analog Computing</h3>
+                            <P>Computers have been digital for half a century. Why would anyone want to resurrect the clunkers of yesteryear?</P>
+                            <P>CHARLES PLATI</P>
+                        </div>
+                    </div>
+                </div>
         </div>
 
     </div>
